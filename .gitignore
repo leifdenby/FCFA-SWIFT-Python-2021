@@ -5,3 +5,4 @@ notebooks*/*.pdf
 notebooks*/*.txt
 notebooks*/*.csv
 notebooks*/*.jpeg
+*.pyc
