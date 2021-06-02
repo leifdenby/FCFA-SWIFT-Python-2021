@@ -1,2 +1,7 @@
 data/
 .ipynb_checkpoints/
+notebooks*/*.png
+notebooks*/*.pdf
+notebooks*/*.txt
+notebooks*/*.csv
+notebooks*/*.jpeg
