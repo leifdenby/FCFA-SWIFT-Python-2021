@@ -41,6 +41,15 @@ jobs:
       - name: Download test data
         run: |
           bash binder/postBuild
+      - name: git info
+        run: |
+          git log --name-only -1 | cat -
+      - name: look for *&^*&^
+        run: |
+          grep -r "kernelspec" .
+      - name: look for more *&^*&^
+        run: |
+          grep -r "python3" .
       - name: Test with pytest
         run: |
           pytest .github/ # the test for testing the notebooks is in .github/
