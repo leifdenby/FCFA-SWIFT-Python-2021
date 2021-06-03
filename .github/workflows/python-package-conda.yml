@@ -37,6 +37,5 @@ jobs:
 #       uses: mxschmitt/action-tmate@v2
       - name: Test with pytest
         run: |
-          conda activate fcfa-swift
           pip install pytest nbconvert nbformat
           pytest .github/ # the test for testing the notebooks is in .github/
