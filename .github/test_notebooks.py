@@ -15,7 +15,6 @@ from nbconvert.preprocessors import ExecutePreprocessor
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.join(TEST_DIR, "..")
-KERNEL_NAME = "fcfa-swift"
 
 
 def _find_notebooks():
@@ -44,7 +43,7 @@ def test_notebook(notebook_filename, html_directory="notebook-html"):
     with open(notebook_filename) as f:
         nb = nbformat.read(f, as_version=4)
 
-    ep = ExecutePreprocessor(timeout=600, kernel_name=KERNEL_NAME)
+    ep = ExecutePreprocessor(timeout=600)
 
     # Check that the notebook runs
     ep.preprocess(nb, {"metadata": {"path": Path(notebook_filename).parent }})
