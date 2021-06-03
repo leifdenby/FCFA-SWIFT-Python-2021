@@ -5,11 +5,11 @@ jobs:
   test:
     name: Test python ${{ matrix.python-version }} on ${{ matrix.os }}
 
-    runs-on: [${{ matrix.os }}, self-hosted]
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        python-version: [3.7, 3.8]
+        os: [ubuntu-latest, windows-latest, self-hosted]
+        python-version: [3.7]
     steps:
       - uses: actions/checkout@v2
 
