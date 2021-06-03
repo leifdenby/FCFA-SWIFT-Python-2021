@@ -38,6 +38,12 @@ jobs:
       - name: Install test packages
         run: |
           pip install pytest nbconvert nbformat
+      - name: which python
+        run: |
+          which python
+      - name: nb-conda-kernels
+        run: |
+          pip install nb_conda_kernels
       - name: Download test data
         run: |
           bash binder/postBuild
