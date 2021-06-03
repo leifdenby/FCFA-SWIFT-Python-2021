@@ -46,4 +46,4 @@ def test_notebook(notebook_filename, html_directory="notebook-html"):
     ep = ExecutePreprocessor(timeout=600)
 
     # Check that the notebook runs
-    ep.preprocess(nb, {"metadata": {"path": ""}})
+    ep.preprocess(nb, {"metadata": {"path": Path(notebook_filename).parent }})
