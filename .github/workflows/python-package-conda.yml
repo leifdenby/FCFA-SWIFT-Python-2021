@@ -35,7 +35,12 @@ jobs:
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v2
-      - name: Test with pytest
+      - name: Install test packages
         run: |
           pip install pytest nbconvert nbformat
+      - name: Download test data
+        run: |
+          bash binder/postBuild
+      - name: Test with pytest
+        run: |
           pytest .github/ # the test for testing the notebooks is in .github/
