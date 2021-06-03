@@ -36,27 +36,20 @@ jobs:
 #     - name: Setup tmate session
 #       uses: mxschmitt/action-tmate@v2
       - name: Install test packages
+        shell: bash -l {0}
         run: |
           pip install pytest nbconvert nbformat
       - name: which python
         shell: bash -l {0}
         run: |
           which python
-      - name: nb-conda-kernels
-        run: |
-          mamba install nb_conda_kernels
       - name: Download test data
         run: |
           bash binder/postBuild
       - name: git info
         run: |
           git log --name-only -1 | cat -
-      - name: look for *&^*&^
-        run: |
-          grep -r "kernelspec" .
-      - name: look for more *&^*&^
-        run: |
-          grep -r "python3" .
       - name: Test with pytest
+        shell: bash -l {0}
         run: |
           pytest .github/ # the test for testing the notebooks is in .github/
