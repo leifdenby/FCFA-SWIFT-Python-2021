@@ -43,7 +43,7 @@ def test_notebook(notebook_filename, html_directory="notebook-html"):
     with open(notebook_filename) as f:
         nb = nbformat.read(f, as_version=4)
 
-    ep = ExecutePreprocessor(timeout=600)
+    ep = ExecutePreprocessor(timeout=600, kernel_name=None)
 
     # Check that the notebook runs
     ep.preprocess(nb, {"metadata": {"path": Path(notebook_filename).parent }})
