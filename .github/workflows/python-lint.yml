@@ -12,6 +12,6 @@ jobs:
     steps:
     - name: Check formatting with black
       uses: jpetrucciani/black-check@20.8b1
-      - name: Lint with flake8
-        run: |
-          pip install nblint
+    - name: Lint with flake8
+      run: |
+        pip install nblint
