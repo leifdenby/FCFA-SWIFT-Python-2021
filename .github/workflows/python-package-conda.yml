@@ -15,5 +15,5 @@ jobs:
           environment-name: fcfa-swift-training
       - name: Test with pytest
         run: |
-          conda install pytest
+          pip install pytest
           pytest .github/ # the test for testing the notebooks is in .github/
