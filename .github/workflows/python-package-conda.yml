@@ -5,12 +5,18 @@ jobs:
   test:
     name: Test python ${{ matrix.python-version }} on ${{ matrix.os }}
 
-    runs-on: self-hosted
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: [3.7]
     steps:
       - uses: actions/checkout@v2
       - name: Setup conda
         uses: s-weigand/setup-conda@v1
         with:
+          update-conda: true
+          python-version: ${{ matrix.python-version }}
           conda-channels: anaconda, conda-forge
       - run: conda --version
       - name: Add conda to system path
