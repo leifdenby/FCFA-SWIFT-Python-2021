@@ -13,6 +13,8 @@ jobs:
         with:
           environment-file: environment.yml
           environment-name: fcfa-swift-training
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v2
       - name: Test with pytest
         run: |
           pip install pytest nbconvert nbformat
