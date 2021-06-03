@@ -15,5 +15,6 @@ jobs:
           environment-name: fcfa-swift-training
       - name: Test with pytest
         run: |
-          pip install pytest nbtest nbformat cchardet
+          pip install cchardet
+          pip install pytest nbtest nbformat
           pytest .github/ # the test for testing the notebooks is in .github/
