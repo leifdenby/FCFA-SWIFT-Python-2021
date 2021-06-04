@@ -18,3 +18,5 @@ dependencies:
   - pip:
      - metpy
      - xclim # version on conda-forge appears to not be compatible with cartopy
+     - openpyxl
+     - pymannkendall
