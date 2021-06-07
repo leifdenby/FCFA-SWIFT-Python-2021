@@ -1,5 +1,7 @@
 # FCFA-SWIFT Python training 2021
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leifdenby/FCFA-SWIFT-Python-2021/HEAD)
+
 Hi!
 
 You're looking at the repository for the 7th to 12th June 2021 FCFA
@@ -13,7 +15,7 @@ training material (including example answers to the exercises)
 The course time-table is below (note: all times are in local-time in
 Ghana, so UTC+0)
 
-![](graphics/timetable-white.png)
+<img src="graphics/timetable-white.png" width=500 />
 
 
 
@@ -51,17 +53,53 @@ All notebooks are stored in [notebooks/](notebooks/). There are also a set of sa
 
 ## Getting started
 
-**TODO**: add instructions on how to download/clone this repository and
-how to get the datasets we will be working with
+To work through the course you will need three things on your computer:
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/leifdenby/FCFA-SWIFT-Python-2021/HEAD)
+1. A copy of the course Jupyter notebooks
+2. A copy of the datasets we’ll be working with
+3. A conda environment with the necessary packages installed
 
 If you are having difficulty getting set up on your own computer you may
 click the "launch on binder"-link above. **Note**: when you run the
 exercises on binder what you write will not be saved locally and so you
-will loose your work if you close the browser.
+will loose your work if you close the browser. 
 
+### 1. Downloading the notebooks to your computer
 
+The easiest way to get a copy of the notebooks on your computer is simply to clone this repository
+
+```bash
+$> git clone https://github.com/leifdenby/FCFA-SWIFT-Python-2021/
+$> cd https://github.com/leifdenby/FCFA-SWIFT-Python-2021/
+```
+
+### 2. Download the datasets to your computer
+
+All the datasets used in this course are in a single zip-file that you can download from [http://homepages.see.leeds.ac.uk/~earlcd/fcfa-swift-python-2021/fcfa-swift-python-2021.data.zip](http://homepages.see.leeds.ac.uk/~earlcd/fcfa-swift-python-2021/fcfa-swift-python-2021.data.zip). You should unpack this file to the same folder where you cloned the course notebooks repository:
+
+```bash
+$> wget http://homepages.see.leeds.ac.uk/~earlcd/fcfa-swift-python-2021/fcfa-swift-python-2021.data.zip
+$> unzip fcfa-swift-python-2021.data.zip
+```
+
+### 3. Setting up a conda environment
+
+To install the python packages you will be taught to use in this course you can use the conda "environment-file" included in the course repository (it's called `environment.yml`). First make sure you have `conda` installed on your computer ([instructions on how to install conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html))
+
+```python
+$> conda env create -n fcfa-swift -f environment.yml
+$> conda activate fcfa-swift
+```
+
+You can now open up a Jupyter notebook session and get working on the notebooks.
+
+```bash
+$>jupyter notebook
+```
+
+We hope you enjoy the course!  
+Marian, Maureen, Jeffrey and Leif
+ 
 
 | ![](graphics/fcfa_logo.jpg) | ![](graphics/swift-logo.png) |
 | --------------------------- | ---------------------------- |
