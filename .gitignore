@@ -7,3 +7,4 @@ notebooks*/*.csv
 notebooks*/*.jpeg
 *.pyc
 dask-worker-space/
+.DS_Store
